@@ -1,68 +1,115 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* Global Styles */
 body {
+  font-family: 'Inter', sans-serif;
+  color: #2F0A28; 
+  background-color: #FFCAAF; 
+  line-height: 1.8;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+/* Header Navigation */
+header {
+  background-color: #48483A; 
+  padding: 2rem;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+header button {
+  font-size: 1.8rem;
+  color: #FFCAAF; 
+  font-weight: bold;
+  padding: 1.2rem 2.5rem;
+  background-color: #A36D90;
+  border-radius: 12px;
+  transition: 0.4s;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+header button:hover,
+header button.active {
+  background-color: #83B692; 
+  color: #2F0A28;
+  box-shadow: 0px 0px 20px rgba(131, 182, 146, 0.9);
+  transform: scale(1.1);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+.portfolio-card {
+  background-color: #A36D90;
+  padding: 2rem;
+  border-radius: 12px;
+  color: #FFCAAF;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 0px 18px rgba(163, 109, 144, 0.9);
+}
+
+/* Contact Form */
+form input, form textarea {
+  border: 2px solid #83B692;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.2rem;
+}
+form button {
+  background-color: #48483A;
+  color: #FFCAAF;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #2F0A28;
+  box-shadow: 0px 0px 15px rgba(47, 10, 40, 0.8);
+}
+
+/* Footer */
+footer {
+  background-color: #2F0A28;
+  color: #FFCAAF;
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+footer a {
+  color: #83B692;
+  font-weight: bold;
+  transition: 0.3s;
+}
+footer a:hover {
+  color: #A36D90;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
   }
-  a:hover {
-    color: #747bff;
+  header button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
   }
-  button {
-    background-color: #f9f9f9;
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  section {
+    padding: 2rem;
+  }
+  footer {
+    font-size: 0.9rem;
   }
 }
