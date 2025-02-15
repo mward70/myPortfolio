@@ -77,6 +77,21 @@ form button:hover {
   box-shadow: 0px 0px 15px rgba(47, 10, 40, 0.8);
 }
 
+/*Resume */
+.resume-section {
+  padding: 2rem;
+  background-color: #FFCAAF;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.resume-section iframe {
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  border: 2px solid #A36D90;
+}
+
 /* Footer */
 footer {
   background-color: #2F0A28;
@@ -111,5 +126,8 @@ footer a:hover {
   }
   footer {
     font-size: 0.9rem;
+  }
+  .resume-section iframe {
+   height: 400px;
   }
 }
