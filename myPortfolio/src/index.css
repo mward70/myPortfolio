@@ -108,6 +108,16 @@ footer a:hover {
   color: #A36D90;
 }
 
+.about-me {
+  text-align: center;
+  padding: 2rem;
+}
+.profile-picture {
+  transition: transform 0.3s ease-in-out;
+}
+.profile-picture:hover {
+  transform: scale(1.05);
+}
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
   header {

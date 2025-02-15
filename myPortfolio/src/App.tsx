@@ -5,6 +5,7 @@ import { Input } from './components/input';
 import { Textarea } from './components/textarea';
 import Resume from './components/resume';
 import { motion } from 'framer-motion';
+import profilePic from './assets/profilePic.jpg';
 
 
 const App: React.FC = () => {
@@ -46,7 +47,25 @@ const App: React.FC = () => {
 
       {/* Content Section */}
       <main>
-        {activeSection === 'About Me' && <section><h2 className="text-2xl font-bold">About Me</h2><p>Your bio here...</p></section>}
+        {activeSection === 'About Me' && (
+          <section className="about-me">
+            <h2 className="text-2xl font-bold">About Me</h2>
+            <img 
+              src={profilePic} 
+              alt="Profile" 
+              className="profile-picture" 
+              style={{
+                width: '250px',
+                height: '250px',
+                borderRadius: '50%',
+                border: '5px solid #A36D90',
+                boxShadow: '0px 0px 15px rgba(163, 109, 144, 0.8)',
+                margin: '20px auto'
+              }}
+            />
+            <p>Hello! I'm Megan W. Welcome to my portfolio site!</p>
+          </section>
+        )};
 
         {activeSection === 'Portfolio' && (
           <div>
