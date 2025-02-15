@@ -3,7 +3,9 @@ import { Card } from './components/card';
 import { Button } from './components/button';
 import { Input } from './components/input';
 import { Textarea } from './components/textarea';
+import Resume from './components/resume';
 import { motion } from 'framer-motion';
+
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('About Me');
@@ -73,24 +75,13 @@ const App: React.FC = () => {
           </form>
         )}
 
-        {activeSection === 'Resume' && (
-          <section>
-            <a href="/resume.pdf" download>Download Resume</a>
-            <h3>Proficiencies</h3>
-            <ul>
-              <li>React (TypeScript)</li>
-              <li>Vite</li>
-              <li>PostgreSQL</li>
-              <li>Inquirer CLI</li>
-            </ul>
-          </section>
-        )}
+        {activeSection === 'Resume' && <Resume />}
       </main>
 
       {/* Footer */}
       <footer>
-        <a href="https://github.com/username" target="_blank">GitHub </a>
-        <a href="https://linkedin.com/in/username" target="_blank">LinkedIn </a>
+        <a href="https://github.com/mward70" target="_blank">GitHub </a>
+        <a href="https://linkedin.com/in/meganward3001" target="_blank">LinkedIn </a>
         <a href="https://stackoverflow.com/users/username" target="_blank">Stack Overflow</a>
       </footer>
     </div>
