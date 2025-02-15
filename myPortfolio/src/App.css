@@ -1,42 +1,102 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+/* Global Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #2F0A28; 
+  background-color: #FFCAAF; 
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+/* Header Navigation */
+header {
+  background-color: #48483A; /* Deep olive */
   padding: 2rem;
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+}
+header button {
+  font-size: 1.8rem;
+  color: #FFCAAF; 
+  font-weight: bold;
+  padding: 1.2rem 2.5rem;
+  background-color: #A36D90; 
+  border-radius: 12px;
+  transition: 0.3s;
+}
+header button:hover {
+  background-color: #83B692; 
+  color: #2F0A28;
+  box-shadow: 0px 0px 20px rgba(131, 182, 146, 0.9);
+  transform: scale(1.1);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* Portfolio Section */
+.portfolio-card {
+  background-color: #A36D90;
+  padding: 2rem;
+  border-radius: 12px;
+  color: #FFCAAF;
+  transition: transform 0.3s;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 0px 18px rgba(163, 109, 144, 0.9);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Contact Form */
+form input, form textarea {
+  border: 2px solid #83B692;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+form button {
+  background-color: #48483A;
+  color: #FFCAAF;
+  padding: 1rem 2rem;
+  transition: 0.3s;
+}
+form button:hover {
+  background-color: #2F0A28;
+  box-shadow: 0px 0px 15px rgba(47, 10, 40, 0.8);
+}
+
+/* Footer */
+footer {
+  background-color: #2F0A28;
+  color: #FFCAAF;
+  padding: 1.5rem;
+}
+footer a {
+  color: #83B692;
+  font-weight: bold;
+  justify-content: space-between;
+}
+footer a:hover {
+  color: #A36D90;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  header button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  section {
+    padding: 2rem;
+  }
+  footer {
+    font-size: 0.9rem;
+  }
 }
