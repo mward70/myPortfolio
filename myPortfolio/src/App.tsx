@@ -4,7 +4,6 @@ import { Button } from './components/button';
 import { Input } from './components/input';
 import { Textarea } from './components/textarea';
 import Resume from './components/resume';
-import { motion } from 'framer-motion';
 import profilePic from './assets/profilePic.jpg';
 import catSleeping from './assets/catSleeping.jpg';
 import puzzleCat from './assets/puzzleCat.jpg';
@@ -112,7 +111,7 @@ const App: React.FC = () => {
             <Textarea placeholder="Message" onBlur={(e) => handleValidation('message', e.target.value)} />
             {formErrors.message && <p>{formErrors.message}</p>}
 
-            <Button type="submit">Send</Button>
+            <Button>Send</Button>
           </form>
         )}
 
